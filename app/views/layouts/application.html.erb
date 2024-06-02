@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chanmio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/d9ac1d092f.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>自分の題名</h1>
+      <div class="log">
+          <h3><%= link_to "新規投稿へ", new_meal_path %></h3>
+            <% if user_signed_in? %>
+              <h3><%= link_to "マイページへ", user_path(current_user.id) %></h3>
+              <h3><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></h3>
+            <% else %>  
+              
+              <h3><%= link_to "ログイン", user_session_path %></h3>
+          <% end %>
+      </div>
+    </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <%= yield %>
+    </body>
+</html>

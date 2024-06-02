@@ -1,0 +1,218 @@
+.asahi{
+    display: flex;
+    width:1170px;
+    height:70px;
+    margin-left:20px;
+    // justify-content: space-between;
+}
+.healthy{
+    width:130px;
+    height:90px;
+}    
+
+.healthy1{
+    margin-top: 0em;
+    z-index: 3;
+    width:130px;
+    height:90px;
+    position: absolute;
+    color: white;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px; 
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 20px;
+    height:30px;
+
+}
+
+    .food {
+        background-image: url('photo-1547592180-85f173990554.avif');
+        z-index: 0;
+        background-size: 100%;
+        color:white;
+        font-family: "Yusei Magic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;  
+        filter: brightness(50%);
+            transition: filter 0.3s ease;  
+        text-shadow: 0 2px 2px #666;
+        position: relative;
+    }
+   
+    .background_food::before{
+        content: '';
+        background: inherit;
+        filter: brightness(75%);
+        z-index: -1;
+    }
+    .food:hover {
+        filter: brightness(100%);
+        }
+
+.standard{
+     width:130px;
+    height:90px;
+
+}
+
+.standard1{
+    margin-top: 0em;
+    z-index: 3;
+    width:130px;
+    height:90px;
+    position: absolute;
+    color: white;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px; 
+    margin-left: 95px;
+    margin-top: 20px;
+    height:30px;
+
+}
+
+.standard{
+    .food{
+        background-image: url('tonkatu.jpg');
+        background-size: 100%;
+        color:white;
+        font-family: "Yusei Magic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        filter: brightness(50%);
+        transition: filter 0.3s ease;
+        margin-left:70px;
+        .food:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+          }
+    }
+}
+
+
+    .background_food::before{
+        content: '';
+        background: inherit;
+        filter: brightness(75%);
+        z-index: -1;
+    }
+
+    .food:hover {
+    filter: brightness(100%);
+        }
+        
+        .main{
+            width:130px;
+            height:90px;
+            margin-left: 70px;
+            .main span{
+                margin-bottom: 70px;
+                margin-top: 0em;
+            }
+            .food{
+                background-image: url('meatloaf-3747129_1280.jpg');
+                background-size: 100%;
+                color:white;
+                font-family: "Yusei Magic", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 30px;
+                filter: brightness(50%);
+                transition: filter 0.3s ease;
+                margin-left:70px;
+            }
+            .food:hover {
+                filter: brightness(100%);
+                }
+        }
+        .side{
+            width:130px;
+            height:90px;
+            margin-left: 70px;
+            .side span{
+                margin-bottom: 70px;
+                margin-top: 0em;
+            }
+            .food{
+                background-image: url('salad-g021ac7a32_640.jpg');
+                background-size: 100%;
+                color:white;
+                font-family: "Yusei Magic", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 30px;
+                filter: brightness(50%);
+                    transition: filter 0.3s ease;
+                    margin-left:70px;
+
+            }
+            .food:hover {
+                filter: brightness(100%);
+                }
+        }
+        .drink{
+            width:130px;
+            height:90px;
+            margin-left: 70px;
+            .drink span{
+                margin-bottom: 70px;
+                margin-top: 0em;
+            }
+            .food{
+                background-image: url('meal.avif');
+                background-size: 100%;
+                color:white;
+                font-family: "Yusei Magic", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 30px;
+                filter: brightness(50%);
+                transition: filter 0.3s ease;
+                margin-left:70px;
+
+                    
+            }
+            .food:hover {
+                filter: brightness(100%);
+                }
+        }
+        .dessert{
+            width:130px;
+            height:90px;
+            margin-left: 70px;
+            .dessert span{
+                margin-bottom: 70px;
+                margin-top: 0em;
+            }
+            .food{
+                background-image: url('berries-6514669_1280.jpg');
+                background-size: 100%;
+                color:white;
+                font-family: "Yusei Magic", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 30px;
+                filter: brightness(50%);
+                transition: filter 0.3s ease;
+                margin-left:70px;
+
+            }
+            .food:hover {
+                filter: brightness(100%);
+                }
+        }
+        .food{
+            width:180px;
+            height:90px;
+            text-decoration: none;
+        }
+        .meals-t{display:flex;
+            width:100%;
+            flex-wrap: wrap;
+        }

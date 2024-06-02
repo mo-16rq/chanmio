@@ -1,0 +1,8 @@
+def create 
+    @post = current_user.posts.build(post_params)
+
+
+    def post_params
+      self.params.require(:post).permit(:content, :title, :image_top , images: [])
+    end
+end
