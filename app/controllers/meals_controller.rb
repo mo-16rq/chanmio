@@ -48,6 +48,19 @@ class MealsController < ApplicationController
           @comment = Comment.new
         end
       end
+
+      def edit
+        @meal =Meal.find(params[:id])
+      end
+
+      def update
+        meal = Meal.find(params[:id])
+        if meal.update(meal_params)
+          redirect_to :action => "show", :id => meal.id
+        else
+          redirect_to :action => "new"
+        end
+      end
     
       private
       def meal_params

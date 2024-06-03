@@ -104,6 +104,7 @@
         <%= t.likes.count %>
       <% end %>
       <%= link_to "詳細へ", meal_path(t.id) %> 
+      <%= link_to "編集する", edit_meal_path(t.id) %>
     </div>
   <% end %>
 </div>
