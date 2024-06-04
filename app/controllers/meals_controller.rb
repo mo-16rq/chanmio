@@ -61,6 +61,12 @@ class MealsController < ApplicationController
           redirect_to :action => "new"
         end
       end
+
+      def destroy
+        meal = Meal.find(params[:id])
+        meal.destroy
+        redirect_to action: :index
+      end
     
       private
       def meal_params

@@ -1,32 +1,38 @@
 <h1>お料理集</h1>
 <h3>Meal詳細</h3>
-<div class="meal">
-  <p><%= @meal.name %></p>
-  <p><%= @meal.created_at %></p>
-    <% if user_signed_in? %>
-      <% if current_user.already_liked?(@meal) %>
-        <%= link_to meal_like_path(@meal), method: :delete do %>
-          <i class="fa-solid fa-heart"></i>          <p>いいねを取り消す</p><%= @meal.likes.count %>
+<div class="hako">
+  <div class="meal">
+    <p><%= @meal.name %></p>
+    <p><%= @meal.created_at %></p>
+        <div class="image-top">
+          <%= image_tag @meal.resize_image_top if @meal.image_top.attached? %>
+        </div>
+
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(@meal) %>
+          <%= link_to meal_like_path(@meal), method: :delete do %>
+            <i class="fa-solid fa-heart"></i>          <p>いいねを取り消す</p><%= @meal.likes.count %>
+          <% end %>
+        <% else %>
+          <%= link_to meal_likes_path(@meal), method: :post do %>
+            <i class="fa-regular fa-heart"></i>
+            <%= @meal.likes.count %>
+          <% end %>
         <% end %>
       <% else %>
-        <%= link_to meal_likes_path(@meal), method: :post do %>
-          <i class="fa-regular fa-heart"></i>
-          <%= @meal.likes.count %>
-        <% end %>
+        <i class="fa-regular fa-heart"></i>
+        <%= @meal.likes.count %>
       <% end %>
-    <% else %>
-      <i class="fa-regular fa-heart"></i>
-      <%= @meal.likes.count %>
-    <% end %>
-  <%= link_to "編集する", edit_meal_path(@meal.id) %>
+    <%= link_to "編集する", edit_meal_path(@meal.id) %>
+  </div>
 </div>
-
 <h2>いいねしたユーザー</h2>
 <% @meal.liked_users.each do |user| %>
   <li><%= user.email %></li>
 <% end %>
 <div class="comment-wrapper">
   <p>コメント一覧</p>
+
   <% @comments.each do |t| %>
     <div>
       <%= t.user.email unless t.user.blank? %>
@@ -46,7 +52,4 @@
   <% end %>
 </div>
 
-<div class="image-top">
-    <%= image_tag @meal.resize_image_top if @meal.image_top.attached? %>
-</div>
 <%= link_to "レシピ一覧に戻る", meals_path %>

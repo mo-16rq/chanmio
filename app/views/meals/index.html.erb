@@ -105,6 +105,7 @@
       <% end %>
       <%= link_to "詳細へ", meal_path(t.id) %> 
       <%= link_to "編集する", edit_meal_path(t.id) %>
+      <%= button_to "削除する", meal_path(t.id), method: :delete %>
     </div>
   <% end %>
 </div>
