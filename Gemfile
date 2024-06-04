@@ -63,3 +63,4 @@ gem 'aws-sdk-s3', require: false
 gem 'image_processing'
 gem 'mini_magick'
 gem 'active_storage_validations'
+gem 'carrierwave' , '~> 1.3' ,  '>= 1.3.1'
