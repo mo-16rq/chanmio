@@ -1,17 +1,25 @@
-<h1>(自分の題名)</h1>
 <h3>新規投稿ページ</h3>
 <%= form_for @meal do |f| %>
     <div class="field">
-         <%= f.label :料理名 %>
-            <%= f.text_field :name, :size => 30 %>
-            <%= f.label :食材%>
-            <%= f.text_field :name, :size => 30 %>
+         <div class="ryourimei">
+            <%= f.label :料理名 %>
+            <%= f.text_field :name, style: "height: 20px; width: 300px;" %>
+         </div>
+         <div class="shokuzai2">
+            <br><%= f.label :食材%>
+            <%= f.text_field :material, style: "height: 50px; width: 500px;" %>
+         </div>
+         <div class="tukurikata2">
+            <br><%= f.label :つくりかた%>
+            <%= f.text_area :about, style: "height: 50px; width: 500px;" %>
+         </div>   
 
-
+         <div class="gazou">
             <span class="image-top">
-               <%= f.label :image_top, '画像' %>
+               <br><%= f.label :image_top, '画像' %>
                <%= f.file_field :image_top, accept: "image/jpeg,image/gif,image/png" %>
             </span>
+            
 
             <script type="text/javascript">
                $("#post_image_top, #post_images").bind("change", function() {
@@ -30,7 +38,7 @@
             ["サイド", "サイド"],
             ["ドリンク", "ドリンク"],
             ["デザート", "デザート"]], include_blank: "選択して下さい" %>
-         
+         </div>
       
 
          <h5>総合評価</h5>

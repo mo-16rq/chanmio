@@ -11,7 +11,19 @@
   .name_field{
     width: 200px;
     margin-bottom: 30px;
+    
   }
+
+  .input#meal_name{
+    width: 300px;
+    height: 700px;
+  }
+
+  .input#meal_material{
+    width: 300px;
+    height: 700px
+  }
+
 
   .post_form{
     display: flex;

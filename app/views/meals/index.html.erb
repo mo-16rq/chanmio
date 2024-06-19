@@ -25,49 +25,70 @@
     </div>
   </div>
  
-  
-  <div class="main">
-    <%= button_to meals_main_path, method: :get, class: "food" do %>
-      <span>MAIN</span>
-    <% end %>
+  <div class="main2">
+    <div class="main1">
+      MAIN
+    </div>
+    <div class="main">
+      <%= button_to meals_main_path, method: :get, class: "food" do %>
+      <% end %>
+    </div>
   </div>
 
   
-  <div class="side">
-    <%= button_to meals_side_path, method: :get, class: "food" do %>
-      <span>SIDE</span>
-    <% end %>
+  <div class="side2">
+    <div class="side1">
+      SIDE
+    </div>
+    <div class="side">
+      <%= button_to meals_side_path, method: :get, class: "food" do %>
+      <% end %>
+    </div>
   </div>
 
   
 
-  <div class="drink">
-    <%= button_to meals_drink_path, method: :get, class: "food" do %>
-      <span>DRINK</span>
-    <% end %>
+  <div class="drink2">
+    <div class="drink1">
+      DRINK
+    </div>
+    <div class="drink">
+      <%= button_to meals_drink_path, method: :get, class: "food" do %>
+      <% end %>
+    </div>
   </div>
 
   
   
-  <div class="dessert">
-    <%= button_to meals_dessert_path, method: :get, class: "food" do %>
-      <span>DESSERT</span>
-    <% end %>
+  <div class="dessert2">
+    <div class="dessert1">
+      DESSERT
+    </div>
+    <div class="dessert">
+      <%= button_to meals_dessert_path, method: :get, class: "food" do %>
+      <% end %>
+    </div>
   </div>
 </div>
 
-<h3>投稿を検索</h3>
-<%= form_tag({controller:"meals",action:"index"}, method: :get) do %>
-<%= text_field_tag :search %>
-  <%= submit_tag '検索する'  %>
-<% end %>
+
+<div class="kensaku">
+  <h3>投稿を検索</h3>
+  <%= form_tag({controller:"meals",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search %>
+    <%= submit_tag '検索する'  %>
+  <% end %>
+</div>
+
 <div class="meals-t">
   <% @meals.each do |t| %>
     <div class="meals-container">
       <div class="meal">
         <h2><%= t.name %></h2>
         <div class="image-top">
-          <%= image_tag t.resize_image_top if t.image_top.attached? %>
+          <% if t.image_top.attached? %>
+            <%= image_tag t.resize_image_top, width: "228px", height: "278px" %>
+          <% end %>
         </div>
         <h4>総合評価：
           <span class="star-rating">

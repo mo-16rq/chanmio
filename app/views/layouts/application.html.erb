@@ -12,17 +12,30 @@
 
   <body>
     <header>
-      <h1>自分の題名</h1>
+        <%= link_to meals_path do %>
+          <%= image_tag 'rogo.2.png', class:"logo-image" %>
+        <% end %>
       <div class="log">
-          <h3><%= link_to "新規投稿へ", new_meal_path %></h3>
-            <% if user_signed_in? %>
-              <h3><%= link_to "マイページへ", user_path(current_user.id) %></h3>
-              <h3><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></h3>
-            <% else %>  
-              
-              <h3><%= link_to "ログイン", user_session_path %></h3>
-          <% end %>
+        <%= link_to new_meal_path, class:'link', method: :get do %>
+          <i class="fa-solid fa-paper-plane fa-2x "style="color:#f7f4f2;"></i>
+          <span class="log2">新規投稿</span>
+        <% end %>
       </div>
+    <div class="hito">
+        <% if user_signed_in? %>
+          <%= link_to user_path(current_user.id), class:'link', method: :get do %>
+            <i class="fa-solid fa-user fa-2x "style="color:#f7f4f2;"></i>
+            <span class="log3">マイページ</span>  
+          <% end %>
+    </div>
+        <% else %>
+            </div>
+ 
+          <%= link_to user_session_path, class:'link', method: :get do %>
+            <i class="fa-solid fa-right-to-bracket fa-2x "style="color:#f7f4f2;" ></i>
+            <span class="log4">ログイン</span>    
+          <% end %>
+        <% end %>
     </header>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

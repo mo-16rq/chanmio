@@ -70,6 +70,6 @@ class MealsController < ApplicationController
     
       private
       def meal_params
-        params.require(:meal).permit(:name, :genre, :overall,:level, :image_top , images: [])
+        params.require(:meal).permit(:name, :material,:about, :genre, :overall,:level, :image_top , images: [])
       end
 end

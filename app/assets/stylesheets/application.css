@@ -13,12 +13,17 @@
  *= require_tree .
  *= require_self
  */
-
+ * {
+   padding: 0;
+   margin: 0;
+ }
  header{
     display:flex;
     /* width:1200px; */
     background-color: #E6C597;
     background-size: cover;
+    height:80px;
+    align-items: center;
  }
 
  header h1{
@@ -27,10 +32,51 @@
  }
 
  .log{
-    margin-left:650px;
+    margin-left:800px;
     display:flex;
+    
  }
 
  .log h3{
     margin-left:20px;
  }
+
+ .logo-image{
+   width: 80px;
+   height: auto;
+}
+
+.hito{
+   margin-left: 100px;
+}
+
+.log2{
+   color:#f7f4f2
+
+}
+
+.log3{
+   color:#f7f4f2
+
+}
+
+.log4{
+   color:#f7f4f2
+
+}
+
+.fa-solid fa-paper-plane fa-2x{
+   color:#f7f4f2
+}
+
+.fa-solid fa-user fa-2x{
+   color:#f7f4f2
+}
+
+.fa-solid fa-right-to-bracket fa-2x{
+   color:#f7f4f2
+}
+
+.link{
+   text-decoration: none!important;
+}

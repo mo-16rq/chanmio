@@ -1,5 +1,51 @@
-<h3>dessert</h3>
+<h3>デザート</h3>
 
-<% @dessert.each do |t| %>
-    <%= t.name %>
-<% end%>
+<div class="meals-t">
+    <% @dessert.each do |t| %>
+      <div class="meals-container">
+        <div class="meal">
+          <h2><%= t.name %></h2>
+          <div class="image-top">
+            <%= image_tag t.resize_image_top if t.image_top.attached? %>
+          </div>
+          <h4>総合評価：
+            <span class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+            </span> 
+          </h4>
+        </div>
+  
+        <div>
+          <h4>料理レベル：
+            <span class="star-rating">
+              <span class="star-rating-front" style="width: <%= getPercent(t.level) %>%;">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+            </span>
+          </h4>
+        </div>
+  
+        <% if user_signed_in? %>
+          <% if current_user.already_liked?(t) %>
+              <%= link_to meal_like_path(id: t.id, meal_id: t.id), method: :delete do %>
+                  <i class="fa-solid fa-heart"></i>
+                  <%= t.likes.count %>
+              <% end %>
+          <% else %>
+            <%= link_to meal_likes_path(id: t.id, meal_id: t.id), method: :post do %>
+                <i class="fa-regular fa-heart"></i>
+                <%= t.likes.count %>
+            <% end %>
+          <% end %>
+          <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %>
+        <% else %>
+          <i class="fa-regular fa-heart"></i>
+          <%= t.likes.count %>
+        <% end %>
+        <%= link_to "詳細へ", meal_path(t.id) %> 
+        <%= link_to "編集する", edit_meal_path(t.id) %>
+        <%= button_to "削除する", meal_path(t.id), method: :delete %>
+      </div>
+    <% end %>
+</div>
+  

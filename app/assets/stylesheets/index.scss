@@ -216,3 +216,251 @@
             width:100%;
             flex-wrap: wrap;
         }
+
+.standard{
+     width:130px;
+    height:90px;
+
+}
+
+.standard1{
+    margin-top: 0em;
+    z-index: 3;
+    width:130px;
+    height:90px;
+    position: absolute;
+    color: white;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px; 
+    margin-left: 95px;
+    margin-top: 20px;
+    height:30px;
+
+}
+
+.standard{
+    .food{
+        background-image: url('tonkatu.jpg');
+        background-size: 100%;
+        color:white;
+        font-family: "Yusei Magic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        filter: brightness(50%);
+        transition: filter 0.3s ease;
+        margin-left:70px;
+        .food:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+          }
+    }
+}
+
+
+    .background_food::before{
+        content: '';
+        background: inherit;
+        filter: brightness(75%);
+        z-index: -1;
+    }
+
+    .food:hover {
+    filter: brightness(100%);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .main{
+            width:130px;
+           height:90px;
+       
+       }
+       
+       .main1{
+           margin-top: 0em;
+           z-index: 3;
+           width:130px;
+           height:90px;
+           position: absolute;
+           color: white;
+           font-family: "Yusei Magic", sans-serif;
+           font-weight: 400;
+           font-style: normal;
+           font-size: 30px; 
+           margin-left: 200px;
+           margin-top: 20px;
+           height:30px;
+       
+       }
+       
+       .standard{
+           .food{
+               background-image: url('tonkatu.jpg');
+               background-size: 100%;
+               color:white;
+               font-family: "Yusei Magic", sans-serif;
+               font-weight: 400;
+               font-style: normal;
+               font-size: 30px;
+               filter: brightness(50%);
+               transition: filter 0.3s ease;
+               margin-left:70px;
+               .food:active {
+                   box-shadow: 0 5px #666;
+                   transform: translateY(4px);
+                 }
+           }
+       }
+       
+       
+           .background_food::before{
+               content: '';
+               background: inherit;
+               filter: brightness(75%);
+               z-index: -1;
+           }
+       
+           .food:hover {
+           filter: brightness(100%);
+               }
+
+
+
+
+
+
+               .standard{
+                width:130px;
+               height:90px;
+           
+           }
+           
+           .standard1{
+               margin-top: 0em;
+               z-index: 3;
+               width:130px;
+               height:90px;
+               position: absolute;
+               color: white;
+               font-family: "Yusei Magic", sans-serif;
+               font-weight: 400;
+               font-style: normal;
+               font-size: 30px; 
+               margin-left: 95px;
+               margin-top: 20px;
+               height:30px;
+           
+           }
+           
+           .standard{
+               .food{
+                   background-image: url('tonkatu.jpg');
+                   background-size: 100%;
+                   color:white;
+                   font-family: "Yusei Magic", sans-serif;
+                   font-weight: 400;
+                   font-style: normal;
+                   font-size: 30px;
+                   filter: brightness(50%);
+                   transition: filter 0.3s ease;
+                   margin-left:70px;
+                   .food:active {
+                       box-shadow: 0 5px #666;
+                       transform: translateY(4px);
+                     }
+               }
+           }
+           
+           
+               .background_food::before{
+                   content: '';
+                   background: inherit;
+                   filter: brightness(75%);
+                   z-index: -1;
+               }
+           
+               .food:hover {
+               filter: brightness(100%);
+                   }
+
+                .side{
+                width:130px;
+                height:90px;
+               }
+               
+               .side1{
+                   margin-top: 0em;
+                   z-index: 3;
+                   width:130px;
+                   height:90px;
+                   position: absolute;
+                   color: white;
+                   font-family: "Yusei Magic", sans-serif;
+                   font-weight: 400;
+                   font-style: normal;
+                   font-size: 30px; 
+                   margin-left: 200px;
+                   margin-top: 20px;
+                   height:30px;
+               }
+
+               .drink{
+                width:130px;
+               height:90px;
+           
+           }
+           
+           .drink1{
+               margin-top: 0em;
+               z-index: 3;
+               width:130px;
+               height:90px;
+               position: absolute;
+               color: white;
+               font-family: "Yusei Magic", sans-serif;
+               font-weight: 400;
+               font-style: normal;
+               font-size: 30px; 
+               margin-left: 190px;
+               margin-top: 20px;
+               height:30px;
+           
+           }
+
+
+           .dessert{
+            width:130px;
+           height:90px;
+       
+       }
+       
+       .dessert1{
+           margin-top: 0em;
+           z-index: 3;
+           width:130px;
+           height:90px;
+           position: absolute;
+           color: white;
+           font-family: "Yusei Magic", sans-serif;
+           font-weight: 400;
+           font-style: normal;
+           font-size: 30px; 
+           margin-left: 175px;
+           margin-top: 20px;
+           height:30px;
+       
+       }
